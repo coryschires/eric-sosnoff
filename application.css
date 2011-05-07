@@ -1,0 +1,128 @@
+/*
+light gray: #6f6f6f
+link color: #??????
+*/
+/*------------------------------------------------------------------------------------------------------------------
+                                                      RESET
+------------------------------------------------------------------------------------------------------------------*/
+* { margin: 0; padding: 0; }
+html, body { height: 100%; }
+html { overflow-y: scroll; }
+body { font-size: 62.5%; font-family: Helvetica, Arial, sans-serif; }
+ul { list-style: disc inside; }
+ol { list-style: decimal inside; }
+li { list-style-position: outside;}
+a { outline: none; text-decoration: none; }
+a img	{ border: none; background: none; }
+img { vertical-align: middle; }
+table { border-collapse: collapse; }
+p { margin-top: 10px; }
+textarea { resize: none; }
+input:focus, textarea:focus { outline: none; }
+header, nav, footer { display: block; }
+.clear { clear: both; }
+
+
+/*------------------------------------------------------------------------------------------------------------------
+                                                      TYPOGRAPHY
+------------------------------------------------------------------------------------------------------------------*/
+a, a:visited { color: #856A31; }
+a:hover { text-decoration: underline; }
+p, li { font-size: 12px; line-height: 18px; margin: 0 0 10px 0; }
+h1 { font-size: 36px; font-weight: normal; color: #333; }
+h2 { font-size: 28px; font-weight: normal; color: #333; }
+h3 { font-size: 24px; font-weight: normal; margin: 40px 0 10px 0; color: #333; }
+ol, ul { padding-left: 30px; }
+
+/*------------------------------------------------------------------------------------------------------------------
+                                                      STRUCTURE
+------------------------------------------------------------------------------------------------------------------*/
+body { 
+  color: #6f6f6f;
+}
+#pagewrap {
+  width: 750px; 
+  margin: 0 auto;
+  background: white;
+  height: 500px;
+  padding: 20px;
+}
+header {
+  margin-top: 25px;
+  width: 750px;
+  overflow: hidden;
+}
+
+header #slogan {
+  float: right;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 16px;
+  color: #999;
+  margin-right: 21px;
+}
+
+#pagewrap .page {
+  display: none;
+}
+
+/*------------------------------------------------------------------------------------------------------------------
+                                                    GLOBAL NAVIGATION
+------------------------------------------------------------------------------------------------------------------*/
+header nav { 
+  border-top: 5px #6f6f6f solid;
+  border-bottom: 5px #6f6f6f solid;
+  background: url(images/scatterplot.jpg) repeat;
+  margin-top: 20px;
+  width: 940px;
+  height: 250px;
+  position: relative;
+}
+header nav a {
+  position: absolute !important;
+  display: inline-block;
+  color: #333 !important;
+  font-weight: bold;
+  -webkit-border-radius: 4em 4em 4em 4em;
+  -moz-border-radius: 4em 4em 4em 4em;
+  border-radius: 4em 4em 4em 4em;
+  
+  
+  /* hover off events */
+  transition: color 0.2s linear;
+  -moz-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
+  -webkit-transition: background 0.2s linear;
+  -webkit-transition: background 0.2s linear;
+}
+header nav a:hover {
+  z-index: 20;
+  text-decoration: none;
+  /* hover on events */
+  transition: color 0.2s linear;
+  -moz-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
+  -webkit-transition: background 0.2s linear;
+  -webkit-transition: background 0.2s linear;
+}
+header nav a.selected {
+  z-index: 10;
+}
+
+/* default states */
+header nav a[data-id="home"] { background: rgba(206, 228, 166, 0.8); padding: 2.1em 1.2em; }
+header nav a[data-id="bio"] { background: rgba(199, 208, 233, 0.8); padding: 1.5em 1.3em; }
+header nav a[data-id="teach"] { background: rgba(250, 244, 144, 0.8); padding: 2.0em 1.1em; }
+header nav a[data-id="papers"] { background: rgba(255, 227, 191, 0.8); padding: 2em 1em; }
+header nav a[data-id="contact"] { background: rgba(249, 214, 230, 0.8); padding: 2em 0.7em; }
+
+/* hover states */
+header nav a[data-id="home"]:hover { background: rgba(206, 228, 166, 1); }
+header nav a[data-id="bio"]:hover,
+header nav a[data-id="bio"].selected { background: rgba(199, 208, 233, 1); }
+header nav a[data-id="teach"]:hover,
+header nav a[data-id="teach"].selected { background: rgba(250, 244, 144, 1); }
+header nav a[data-id="papers"]:hover,
+header nav a[data-id="papers"].selected { background: rgba(255, 227, 191, 1); }
+header nav a[data-id="contact"]:hover,
+header nav a[data-id="contact"].selected { background: rgba(249, 214, 230, 1); }
